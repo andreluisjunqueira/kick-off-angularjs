@@ -1,0 +1,22 @@
+.jumbotron{
+    width: 450px;
+    margin: 0 auto;
+}
+h3{
+    text-align: center;
+}
+.concluido{
+    text-decoration: line-through;
+    color:#a3a3a3;
+}
+.italico{
+    font-style: italic;
+}
+
+.todo-alerta{
+    background-color: indianred;
+    color:#fff;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}

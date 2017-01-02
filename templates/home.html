@@ -1,0 +1,19 @@
+<div class="jumbotron">
+    <h3>{{app}}</h3> 
+    <input type="text" placeholder="Buscar" class="form-control" ng-model="busca">
+    <table class="table table-striped">
+        <tr>
+            <th></th>
+            <th>A fazer</th>
+            <th>Quando </th>
+        </tr>
+
+        <tr ng-class="{'concluido italico':todo.concluida}" ng-repeat="todo in todos | filter:busca">
+            <td><input type="checkbox" ng-model="todo.concluida"></td>
+            <td>{{todo.afazer | etc:6 }}</td>
+            <td>{{todo.dia}}</td>
+        </tr>
+    </table>
+    <a href="" ng-click="alterarPagina('novo')" class="btn btn-primary btn-block">Novo</a>
+
+</div>

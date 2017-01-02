@@ -1,0 +1,13 @@
+<div class="jumbotron">
+    <form name="formTodos">
+        <input type="text" ng-model="tarefas.afazer" ng-required="true" name="todo" class="form-control" placeholder="Tarefa">
+        <select name="" ng-required="true" ng-model="tarefas.dia" class="form-control" ng-options="dias.nome as dias.nome group by dias.semana for dias in diasdasemana">
+        <option value="">Selecione um dia</option>
+        </select>
+        <input type="submit" ng-disabled="formTodos.$invalid" ng-click="novaTarefa(tarefas)" value="Salvar" class="btn btn-primary btn-block">
+        <input type="submit" ng-disabled="!desabilitar(todos)" class="btn btn-danger btn-block" value="Excluir" ng-click="excluirTarefa(todos)">
+    </form>
+    <app-alerta ng-if="erro" titulo="ERRO" >
+        {{erro}}
+    </app-alerta> 
+</div>
